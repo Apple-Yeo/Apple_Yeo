@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://raw.githubusercontent.com/pilji/Design_Maker/master/storage/video/Blossom.GIF');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.petal {
+    position: absolute;
+    background-color: #ffd7e6;
+    border-radius: 150% 0 150% 0;
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+    0% {
+        top: -10%;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 100%;
+        transform: rotate(360deg);
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.editable {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.editable:focus {
+    background: rgba(255, 255, 255, 0.9);
+}
